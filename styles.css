@@ -1,0 +1,113 @@
+body {
+    background-color: #2575AA;
+    /* border: 1px red solid; */
+}
+
+canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#image-selector {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* border: 1px red solid; */
+}
+
+#image-selector img {
+    margin: auto;
+    display: block;
+    /* border: 1px red solid; */
+}
+
+#image-selector button {
+    margin-top: 20px;
+    display: inline-block;
+    height: 50px;
+    /* border: 1px red solid; */
+}
+
+#actions {
+    display: block;
+    width: 100%;
+    /* border: 1px red solid; */
+}
+
+.meme {
+    /* border: 1px red solid; */
+    position: relative;
+    margin: auto;
+}
+
+.meme #texto-superior {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: 'Black Han Sans', sans-serif;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+       1px 1px 0 #000;
+    /* border: 1px red solid; */
+}
+
+.meme #texto-inferior {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: 'Black Han Sans', sans-serif;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+       1px 1px 0 #000;
+    /* border: 1px red solid; */
+}
+
+#input-superior {
+    display: block;
+    margin: 15px auto 10px auto;
+    height: 40px;
+    /* border: 1px red solid; */
+}
+
+#input-inferior {
+    display: block;
+    margin: 15px auto 10px auto;
+    height: 40px;
+    /* border: 1px red solid; */
+}
+
+#add-button {
+    display: block;
+    width: 85px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px red solid; */
+}
+
+.actionButton {
+    display: block;
+    margin: 15px auto 10px auto;
+    height: 40px;
+}
