@@ -28,6 +28,8 @@ canvas {
     margin-top: 20px;
     display: inline-block;
     height: 50px;
+    font-weight: bolder;
+    color: #2575AA;
     /* border: 1px red solid; */
 }
 
@@ -37,13 +39,18 @@ canvas {
     /* border: 1px red solid; */
 }
 
-.meme {
+#meme {
     /* border: 1px red solid; */
     position: relative;
     margin: auto;
+    width: 50%;
 }
 
-.meme #texto-superior {
+#meme img {
+    width: 100%;
+}
+
+#texto-superior {
     position: absolute;
     left: 0;
     right: 0;
@@ -63,7 +70,7 @@ canvas {
     /* border: 1px red solid; */
 }
 
-.meme #texto-inferior {
+#texto-inferior {
     position: absolute;
     left: 0;
     right: 0;
@@ -110,4 +117,16 @@ canvas {
     display: block;
     margin: 15px auto 10px auto;
     height: 40px;
+    border-radius: 45px;
+    border: none;
+    width: 115px;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bolder;
+    color: #2575AA;
+}
+
+.selector {
+    border: none;
+    border-radius: 45px;
+    width: 50px;
 }

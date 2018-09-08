@@ -23,30 +23,36 @@ function addText() {
 	
 		textoSup.innerHTML = superior;
 		textoInf.innerHTML = inferior;
-		readURL();
 }
 
 function saveImage() {
-	meme[0].style.width = document.getElementById('imagem').width.toString() + "px";
-	html2canvas(meme[0], {
+//	meme.style.width = document.getElementById('imagem').width.toString() + "px";
+//	meme.style.height = document.getElementById('imagem').width.toString() + "px";
+	html2canvas(meme, {
 		allowTaint : true,
 		useCORS : true,
+		backgroundColor : null
 		}).then(function(canvas) {
 		document.body.appendChild(canvas);
 	});
 }
 
 function readURL(){
-	
+
 	var loadedImage = document.getElementById("carregarImagem").files[0];
-	var reader = new FileReader();
-	reader.onload = function() {
+
+	if (loadedImage !== null) {
+		var reader = new FileReader();
+		reader.onload = function() {
+			document.getElementById('imagem').src = reader.result;
+			reader.readAsDataURL(loadedImage);
+		}
+
 		document.getElementById('imagem').src = reader.result;
 		reader.readAsDataURL(loadedImage);
+	} else {
+		return;
 	}
-
-	document.getElementById('imagem').src = reader.result;
-	reader.readAsDataURL(loadedImage);
 }
 
 var images = [
@@ -55,10 +61,11 @@ var images = [
 	'https://www.sololearn.com/uploads/slider/3.jpg'
 ];
 
-var meme = document.getElementsByClassName("meme");
 var num = 0;
+
 
 window.addEventListener('DOMContentLoaded', function() {
 	images.crossOrigin = "Anonymous";
 	document.getElementById("carregarImagem").addEventListener('onchange', readURL, true);
+	var meme = document.getElementById("meme");
 });
