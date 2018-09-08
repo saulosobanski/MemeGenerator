@@ -16,10 +16,10 @@ function prev() {
 }
 
 function addText() {
-	var superior = document.getElementById("input-superior").value;
-	var inferior = document.getElementById("input-inferior").value;
-	var textoSup = document.getElementById("texto-superior");
-	var textoInf = document.getElementById("texto-inferior");
+	var superior = document.getElementById("inputSuperior").value;
+	var inferior = document.getElementById("inputInferior").value;
+	var textoSup = document.getElementById("textoSuperior");
+	var textoInf = document.getElementById("textoInferior");
 	
 		textoSup.innerHTML = superior;
 		textoInf.innerHTML = inferior;

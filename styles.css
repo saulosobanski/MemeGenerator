@@ -11,20 +11,22 @@ canvas {
     margin-top: 10px;
 }
 
-#image-selector {
+#imageSelector {
+    display: inline-block;
+    width: 49%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     /* border: 1px red solid; */
 }
 
-#image-selector img {
+#imageSelector img {
     margin: auto;
     display: block;
     /* border: 1px red solid; */
 }
 
-#image-selector button {
+#imageSelector button {
     margin-top: 20px;
     display: inline-block;
     height: 50px;
@@ -34,8 +36,8 @@ canvas {
 }
 
 #actions {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 49%;
     /* border: 1px red solid; */
 }
 
@@ -50,7 +52,7 @@ canvas {
     width: 100%;
 }
 
-#texto-superior {
+#textoSuperior {
     position: absolute;
     left: 0;
     right: 0;
@@ -70,7 +72,7 @@ canvas {
     /* border: 1px red solid; */
 }
 
-#texto-inferior {
+#textoInferior {
     position: absolute;
     left: 0;
     right: 0;
@@ -90,21 +92,21 @@ canvas {
     /* border: 1px red solid; */
 }
 
-#input-superior {
+#inputSuperior {
     display: block;
     margin: 15px auto 10px auto;
     height: 40px;
     /* border: 1px red solid; */
 }
 
-#input-inferior {
+#inputInferior {
     display: block;
     margin: 15px auto 10px auto;
     height: 40px;
     /* border: 1px red solid; */
 }
 
-#add-button {
+#addButton {
     display: block;
     width: 85px;
     margin-top: 10px;
@@ -129,4 +131,18 @@ canvas {
     border: none;
     border-radius: 45px;
     width: 50px;
+}
+
+@media screen and (max-width: 600px) {
+
+    #imageSelector {
+        display: block;
+        width: 100%;
+    }
+
+    #actions {
+        display: block;
+        width: 100%;
+    }
+
 }

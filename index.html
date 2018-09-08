@@ -3,6 +3,7 @@
     <head>
         <title>Meme Generator</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
         <script src="https://github.com/niklasvh/html2canvas/releases/download/v1.0.0-alpha.12/html2canvas.min.js"></script>
         <script src="https://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
@@ -10,21 +11,21 @@
         <script src="scripts.js"></script>
         </head>
     <body>
-        <div id="image-selector">
+        <div id="imageSelector">
             <div id="meme">
-            <p id="texto-superior"></p>
-            <p id="texto-inferior"></p>
+            <p id="textoSuperior"></p>
+            <p id="textoInferior"></p>
             <img id="imagem" src="https://www.sololearn.com/uploads/slider/1.jpg"/>
             </div>
             <button class="selector" onclick="prev()">🠈</button>
             <button class="selector" onclick="next()">🠊</button>
         </div>
         <div id="actions">
-            <input id="input-superior" placeholder="Texto superior">
-            <input id="input-inferior" placeholder="Texto inferior">
-            <button class="actionButton"  id="addButton" onclick="addText()"> Criar </button>
-            <button class="actionButton"  id="saveButton" onclick="saveImage()"> Salvar </button>
-            <input class="actionButton"  id='carregarImagem' onchange="readURL()" type='file'>
+            <input id="inputSuperior" placeholder="Texto superior">
+            <input id="inputInferior" placeholder="Texto inferior">
+            <button class="actionButton" onclick="addText()"> Criar </button>
+            <button class="actionButton" onclick="saveImage()"> Salvar </button>
+            <input class="actionButton" id='carregarImagem' onchange="readURL()" type='file'>
         </div>
     </body>
 </html>
