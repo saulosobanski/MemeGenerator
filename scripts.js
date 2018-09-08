@@ -33,7 +33,8 @@ function saveImage() {
 		useCORS : true,
 		backgroundColor : null
 		}).then(function(canvas) {
-		document.body.appendChild(canvas);
+			canvas.crossOrigin = 'anonymous';
+			document.body.appendChild(canvas);
 	});
 }
 

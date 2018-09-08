@@ -1,6 +1,5 @@
 body {
     background-color: #2575AA;
-    /* border: 1px red solid; */
 }
 
 canvas {
@@ -11,19 +10,25 @@ canvas {
     margin-top: 10px;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #00000055;
+}
+
 #imageSelector {
     display: inline-block;
-    width: 49%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    /* border: 1px red solid; */
+    padding: 1%;
+    vertical-align: middle;
 }
 
 #imageSelector img {
     margin: auto;
     display: block;
-    /* border: 1px red solid; */
 }
 
 #imageSelector button {
@@ -32,31 +37,30 @@ canvas {
     height: 50px;
     font-weight: bolder;
     color: #2575AA;
-    /* border: 1px red solid; */
 }
 
 #actions {
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: inline-block;
-    width: 49%;
-    /* border: 1px red solid; */
+    width: 35%;
+    vertical-align: middle;
 }
 
 #meme {
-    /* border: 1px red solid; */
     position: relative;
     margin: auto;
-    width: 50%;
+    width: 100%;
 }
 
 #meme img {
     width: 100%;
 }
 
-#textoSuperior {
+.memeText {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
     color: #ffffff;
     font-size: 2em;
     font-family: 'Black Han Sans', sans-serif;
@@ -69,41 +73,21 @@ canvas {
         1px -1px 0 #000,
         -1px 1px 0 #000,
        1px 1px 0 #000;
-    /* border: 1px red solid; */
+}
+
+#textoSuperior {
+    top: 0;
 }
 
 #textoInferior {
-    position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
-    color: #ffffff;
-    font-size: 2em;
-    font-family: 'Black Han Sans', sans-serif;
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
-    text-shadow:
-        3px 3px 0 #000,
-        -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-       1px 1px 0 #000;
-    /* border: 1px red solid; */
 }
 
-#inputSuperior {
+.memeInput {
     display: block;
-    margin: 15px auto 10px auto;
-    height: 40px;
-    /* border: 1px red solid; */
-}
-
-#inputInferior {
-    display: block;
-    margin: 15px auto 10px auto;
-    height: 40px;
-    /* border: 1px red solid; */
+    margin: 10px auto 10px auto;
+    height: 35px;
+    border: none;    
 }
 
 #addButton {
@@ -112,7 +96,6 @@ canvas {
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
-    /* border: 1px red solid; */
 }
 
 .actionButton {
@@ -138,11 +121,18 @@ canvas {
     #imageSelector {
         display: block;
         width: 100%;
+        padding: none;
     }
 
     #actions {
         display: block;
         width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        margin: auto;
+        background-color: #2575AA;
     }
 
 }

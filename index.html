@@ -11,21 +11,23 @@
         <script src="scripts.js"></script>
         </head>
     <body>
+    <div class="container">
         <div id="imageSelector">
             <div id="meme">
-            <p id="textoSuperior"></p>
-            <p id="textoInferior"></p>
+            <p class="memeText" id="textoSuperior"></p>
+            <p class="memeText" id="textoInferior"></p>
             <img id="imagem" src="https://www.sololearn.com/uploads/slider/1.jpg"/>
             </div>
             <button class="selector" onclick="prev()">🠈</button>
             <button class="selector" onclick="next()">🠊</button>
         </div>
         <div id="actions">
-            <input id="inputSuperior" placeholder="Texto superior">
-            <input id="inputInferior" placeholder="Texto inferior">
+            <input class="memeInput" id="inputSuperior" placeholder="Texto superior">
+            <input class="memeInput" id="inputInferior" placeholder="Texto inferior">
             <button class="actionButton" onclick="addText()"> Criar </button>
             <button class="actionButton" onclick="saveImage()"> Salvar </button>
             <input class="actionButton" id='carregarImagem' onchange="readURL()" type='file'>
         </div>
+    </div>
     </body>
 </html>
