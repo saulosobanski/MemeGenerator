@@ -35,6 +35,11 @@ function saveImage() {
 		}).then(function(canvas) {
 			canvas.crossOrigin = 'anonymous';
 			document.body.appendChild(canvas);
+			var imageLink = document.createElement('a');
+			imageLink.href = canvas.toDataURL();
+			imageLink.innerHTML = "Abrir imagem"; 
+			document.body.appendChild(imageLink);
+			window.open(canvas.toDataURL());
 	});
 }
 
@@ -68,5 +73,8 @@ var num = 0;
 window.addEventListener('DOMContentLoaded', function() {
 	images.crossOrigin = "Anonymous";
 	document.getElementById("carregarImagem").addEventListener('onchange', readURL, true);
+	document.getElementById("inputSuperior").addEventListener('keyup', addText, true);
+	document.getElementById("inputInferior").addEventListener('keyup', addText, true);
+
 	var meme = document.getElementById("meme");
 });

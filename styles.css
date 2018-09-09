@@ -2,6 +2,18 @@ body {
     background-color: #2575AA;
 }
 
+body a {
+    font-family: Trebuchet MS, sans-serif;
+    color: #2575AA;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    margin: 15px auto 10px auto;
+    display: block;
+    padding: 10px;
+    background: #FFFFFF;
+}
+
 canvas {
     display: block;
     margin-left: auto;
@@ -63,8 +75,7 @@ canvas {
     right: 0;
     color: #ffffff;
     font-size: 2em;
-    font-family: 'Black Han Sans', sans-serif;
-        -webkit-text-fill-color: white;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;         -webkit-text-fill-color: white;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
     text-shadow:
@@ -88,6 +99,7 @@ canvas {
     margin: 10px auto 10px auto;
     height: 35px;
     border: none;    
+    width: 200px;
 }
 
 #addButton {
@@ -102,9 +114,8 @@ canvas {
     display: block;
     margin: 15px auto 10px auto;
     height: 40px;
-    border-radius: 45px;
     border: none;
-    width: 115px;
+    width: 200px;
     font-family: Trebuchet MS, sans-serif;
     font-weight: bolder;
     color: #2575AA;
