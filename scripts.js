@@ -16,10 +16,10 @@ function prev() {
 }
 
 function addText() {
-	var superior = document.getElementById("inputSuperior").value;
-	var inferior = document.getElementById("inputInferior").value;
-	var textoSup = document.getElementById("textoSuperior");
-	var textoInf = document.getElementById("textoInferior");
+	var superior = document.getElementById("input-superior").value;
+	var inferior = document.getElementById("input-inferior").value;
+	var textoSup = document.getElementById("texto-superior");
+	var textoInf = document.getElementById("texto-inferior");
 	
 		textoSup.innerHTML = superior;
 		textoInf.innerHTML = inferior;
@@ -45,7 +45,7 @@ function saveImage() {
 
 function readURL(){
 
-	var loadedImage = document.getElementById("carregarImagem").files[0];
+	var loadedImage = document.getElementById("carregar-imagem").files[0];
 
 	if (loadedImage !== null) {
 		var reader = new FileReader();
@@ -72,9 +72,9 @@ var num = 0;
 
 window.addEventListener('DOMContentLoaded', function() {
 	images.crossOrigin = "Anonymous";
-	document.getElementById("carregarImagem").addEventListener('onchange', readURL, true);
-	document.getElementById("inputSuperior").addEventListener('keyup', addText, true);
-	document.getElementById("inputInferior").addEventListener('keyup', addText, true);
+	document.getElementById("carregar-imagem").addEventListener('onchange', readURL, true);
+	document.getElementById("input-superior").addEventListener('keyup', addText, true);
+	document.getElementById("input-inferior").addEventListener('keyup', addText, true);
 
 	var meme = document.getElementById("meme");
 });
