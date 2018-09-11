@@ -1,5 +1,5 @@
 function next() {
-	var slider = document.getElementById('imagem');
+	var slider = document.getElementById('js-image');
 	num++;
 	if(num >= images.length) {
 		num = 0;
@@ -7,7 +7,7 @@ function next() {
 	slider.src = images[num];
 }
 function prev() {
-	var slider = document.getElementById('imagem');
+	var slider = document.getElementById('js-image');
 	num--;
 	if(num < 0) {
 		num = images.length-1;
@@ -16,18 +16,19 @@ function prev() {
 }
 
 function addText() {
-	var superior = document.getElementById("input-superior").value;
-	var inferior = document.getElementById("input-inferior").value;
-	var textoSup = document.getElementById("texto-superior");
-	var textoInf = document.getElementById("texto-inferior");
+	var superior = document.getElementById("js-upper-input").value;
+	var inferior = document.getElementById("js-lower-input").value;
+	var textoSup = document.getElementById("js-upper-text");
+	var textoInf = document.getElementById("js-lower-text");
 	
 		textoSup.innerHTML = superior;
 		textoInf.innerHTML = inferior;
 }
 
 function saveImage() {
-//	meme.style.width = document.getElementById('imagem').width.toString() + "px";
-//	meme.style.height = document.getElementById('imagem').width.toString() + "px";
+
+	var meme = document.getElementById("js-meme");
+
 	html2canvas(meme, {
 		allowTaint : true,
 		useCORS : true,
@@ -37,24 +38,23 @@ function saveImage() {
 			document.body.appendChild(canvas);
 			var imageLink = document.createElement('a');
 			imageLink.href = canvas.toDataURL();
-			imageLink.innerHTML = "Abrir imagem"; 
+			imageLink.innerHTML = "Abrir Imagem"; 
 			document.body.appendChild(imageLink);
 			window.open(canvas.toDataURL());
 	});
 }
 
 function readURL(){
-
-	var loadedImage = document.getElementById("carregar-imagem").files[0];
+	var loadedImage = document.getElementById("js-upload-image").files[0];
 
 	if (loadedImage !== null) {
 		var reader = new FileReader();
 		reader.onload = function() {
-			document.getElementById('imagem').src = reader.result;
+			document.getElementById('js-image').src = reader.result;
 			reader.readAsDataURL(loadedImage);
 		}
 
-		document.getElementById('imagem').src = reader.result;
+		document.getElementById('js-image').src = reader.result;
 		reader.readAsDataURL(loadedImage);
 	} else {
 		return;
@@ -72,9 +72,7 @@ var num = 0;
 
 window.addEventListener('DOMContentLoaded', function() {
 	images.crossOrigin = "Anonymous";
-	document.getElementById("carregar-imagem").addEventListener('onchange', readURL, true);
-	document.getElementById("input-superior").addEventListener('keyup', addText, true);
-	document.getElementById("input-inferior").addEventListener('keyup', addText, true);
-
-	var meme = document.getElementById("meme");
+	document.getElementById("js-upload-image").addEventListener('onchange', readURL, true);
+	document.getElementById("js-upper-input").addEventListener('keyup', addText, true);
+	document.getElementById("js-lower-input").addEventListener('keyup', addText, true);
 });

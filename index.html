@@ -12,20 +12,20 @@
         </head>
     <body>
     <div class="container">
-        <div id="image-selector">
-            <div id="meme">
-            <p class="meme-text upper" id="texto-superior"></p>
-            <p class="meme-text lower" id="texto-inferior"></p>
-            <img id="imagem" src="https://www.sololearn.com/uploads/slider/1.jpg"/>
+        <div class="image-selector" id="js-image-selector">
+            <div class="meme" id="js-meme">
+            <p class="meme-text upper" id="js-upper-text"></p>
+            <p class="meme-text lower" id="js-lower-text"></p>
+            <img id="js-image" src="https://www.sololearn.com/uploads/slider/1.jpg"/>
             </div>
             <button class="selector" onclick="prev()">🠈</button>
             <button class="selector" onclick="next()">🠊</button>
         </div>
-        <div id="actions">
-            <input class="meme-input" id="input-superior" placeholder="Texto superior">
-            <input class="meme-input" id="input-inferior" placeholder="Texto inferior">
+        <div class="actions">
+            <input class="meme-input" id="js-upper-input" placeholder="Texto superior">
+            <input class="meme-input" id="js-lower-input" placeholder="Texto inferior">
             <button class="action-button" onclick="saveImage()"> Salvar </button>
-            <input class="action-button" id='carregar-imagem' onchange="readURL()" type='file'>
+            <input class="action-button" id='js-upload-image' onchange="readURL()" type='file'>
         </div>
     </div>
     </body>

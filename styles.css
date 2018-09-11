@@ -28,7 +28,7 @@ canvas {
     background-color: #00000055;
 }
 
-#image-selector {
+.image-selector {
     display: inline-block;
     width: 60%;
     margin-left: auto;
@@ -38,12 +38,12 @@ canvas {
     vertical-align: middle;
 }
 
-#image-selector img {
+.image-selector img {
     margin: auto;
     display: block;
 }
 
-#image-selector button {
+.image-selector button {
     margin-top: 20px;
     display: inline-block;
     height: 50px;
@@ -51,7 +51,7 @@ canvas {
     color: #2575AA;
 }
 
-#actions {
+.actions {
     padding-top: 25px;
     padding-bottom: 25px;
     display: inline-block;
@@ -59,13 +59,13 @@ canvas {
     vertical-align: middle;
 }
 
-#meme {
+.meme {
     position: relative;
     margin: auto;
     width: 100%;
 }
 
-#meme img {
+.meme img {
     width: 100%;
 }
 
@@ -86,11 +86,11 @@ canvas {
        1px 1px 0 #000;
 }
 
-.meme-text .upper {
+.upper {
     top: 0;
 }
 
-.meme-text .lower {
+.lower {
     bottom: 0;
 }
 
@@ -100,14 +100,6 @@ canvas {
     height: 35px;
     border: none;    
     width: 200px;
-}
-
-#add-button {
-    display: block;
-    width: 85px;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .action-button {
@@ -129,13 +121,13 @@ canvas {
 
 @media screen and (max-width: 600px) {
 
-    #image-selector {
+    .image-selector {
         display: block;
         width: 100%;
         padding: none;
     }
 
-    #actions {
+    .actions {
         display: block;
         width: 100%;
     }
